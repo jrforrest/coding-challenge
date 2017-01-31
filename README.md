@@ -1,15 +1,15 @@
 # Techstars Engineering Coding Challenge
 
-The Techstars Engineering team would like to congradulate you on making it to our coding challenge. This is your chance to show the team how you approach problems and give them insight into your ability to code. For the challenge you will be required to design, develop, and style a Ruby on Rails application. Feel free to use any third party Gems or libraries you see fit. Low-fi mockups have been provided but please feel free to take your own artistic direction. You will have **one week** from the time you are granted access to this repository to submit a solution for the given requirements. Please read all the instructions carefully and email us if you have any questions. Goodluck, but most of all have fun this is your chance to demonstrate what you can do. 
+The Techstars Engineering team would like to congratulate you on making it to our coding challenge. This is your chance to show the team how you approach problems and give them insight into your ability to code. For the challenge you will be required to design, develop, and style a Ruby on Rails application. Feel free to use any third party Gems or libraries you see fit. Low-fi mockups have been provided but please feel free to take your own artistic direction. You will have **one week** from the time you are granted access to this repository to submit a solution for the given requirements. Please read all the instructions carefully and email us if you have any questions. Good luck, but most of all have fun this is your chance to demonstrate what you can do. 
 
 ## Getting Started
-First fork this repository into your github. Then complete each of the parts below working as you would in a professional environment. Once you are complete please update the README to reflect how to build and run your application, as well as any archicture decisions you have made. When you believe you are ready to submit your challenge put, put a pull request into our master branch. We will see the notification and get back to you on next steps. 
+First fork this repository into your GitHub account. Then complete each of the parts below working as you would in a professional environment. Once you are complete please update the README to reflect how to build and run your application, as well as any architecture decisions you have made. When you believe you are ready to submit your challenge put, put a pull request into our master branch. We will see the notification and get back to you on next steps. 
 
 ## What we are looking for
 
 * Ability to setup a Rails Application
 * Ability to setup a Relational Database
-* Understanding of the HTTP protocal and how it works with RESTful conventions
+* Understanding of the HTTP protocol and how it works with Rails' "RESTful" conventions
 * Understanding the basics of CRUD
   * Create
   * Read
@@ -17,7 +17,7 @@ First fork this repository into your github. Then complete each of the parts bel
   * Delete
 * Ability to layout and design an HTML page with CSS
 * Ability to develop automated tests for your application
-* Ability to interperut requierments
+* Ability to interpret requirements
 
 
 ## The Challenge
@@ -74,7 +74,7 @@ Please build an application that will be a directory of companies, and the peopl
 
 ### Part 5 : Tags
 
-1. In the COmpany details add the ability to tag a company with categories. 
+1. In the Company details add the ability to tag a company with categories. 
 2. Each category can belong to a number of different companies.
 3. Tags added should appear in the company detail page.
 <br />
