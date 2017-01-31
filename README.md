@@ -46,6 +46,8 @@ Please build an application that will be a directory of companies, and the peopl
     * Company Location (City, State) __required__
     * Company Description __required__
     * Founded Date
+<br />
+<br />
 ![step 2](mockups/Step 2.png)
     
 
@@ -54,7 +56,9 @@ Please build an application that will be a directory of companies, and the peopl
 1. Shows All of the companies information
 2. Ability to update company
 3. Ability to delete company
-![step 2](mockups/Step 2.png)
+<br />
+<br />
+![step 3](mockups/Step 3.png)
 
 ### Part 4 : Founders
 
@@ -63,11 +67,17 @@ Please build an application that will be a directory of companies, and the peopl
 3. Founder  Fields
     * Founder Full Name
     * Founder Title
-4. Founders added should display in the company detail page. 
+4. Founders added should display in the company detail page.
+<br />
+<br />
+![step 4](mockups/Step 4.png)
 
 ### Part 5 : Tags
 
 1. In the COmpany details add the ability to tag a company with categories. 
 2. Each category can belong to a number of different companies.
 3. Tags added should appear in the company detail page.
+<br />
+<br />
+![step 5](mockups/Step 5.png)
 
