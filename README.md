@@ -34,6 +34,7 @@ Please build an application that will be a directory of companies, and the peopl
   * Company Location
   * Short Description
 3. Add ability to create a new company
+![step 1](mock)
 
 ### Part 2 : Companies Create
 
