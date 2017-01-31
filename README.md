@@ -34,7 +34,9 @@ Please build an application that will be a directory of companies, and the peopl
   * Company Location
   * Short Description
 3. Add ability to create a new company
-![step 1](mock)
+<br />
+<br />
+![step 1](mockups/Step 1.png)
 
 ### Part 2 : Companies Create
 
@@ -44,12 +46,15 @@ Please build an application that will be a directory of companies, and the peopl
     * Company Location (City, State) __required__
     * Company Description __required__
     * Founded Date
+![step 2](mockups/Step 2.png)
+    
 
 ### Part 3 : Company Details
 
 1. Shows All of the companies information
 2. Ability to update company
 3. Ability to delete company
+![step 2](mockups/Step 2.png)
 
 ### Part 4 : Founders
 
