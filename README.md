@@ -7,7 +7,7 @@ First, fork this repository into your GitHub account. Then complete each of the 
 
 ## What we are looking for
 
-* Ability to set up an MVC applicatoin.
+* Ability to set up an MVC applicatoin (Strongly Recommend Rails).
 * Ability to set up a Relational Database
 * Understanding of the HTTP protocol and how it works with Rails' "RESTful" conventions
 * Understanding the basics of CRUD
