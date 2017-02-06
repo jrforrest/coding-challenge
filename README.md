@@ -1,13 +1,13 @@
 # Techstars Engineering Coding Challenge
 
-The Techstars Engineering team would like to congratulate you on making it to our coding challenge. This is your chance to show the team how you approach problems and give them insight into your ability to code. For the challenge, you will be required to design, develop, and style a Ruby on Rails application. Feel free to use any third party Gems or libraries you see fit. Low-fi mockups have been provided, but please feel free to take your own artistic direction. You will have **one week** from the time you are granted access to this repository to submit a solution for the given requirements. Please read all the instructions carefully and email us if you have any questions. Good luck, but most of all have fun - this is your chance to demonstrate what you can do. 
+The Techstars Engineering team would like to congratulate you on making it to our coding challenge. This is your chance to show the team how you approach problems and give them insight into your ability to code. For the challenge, you will be required to design, develop, and style an MVC application. Feel free to use any third party libraries you see fit. Low-fi mockups have been provided, but please feel free to take your own artistic direction. You will have **one week** from the time you are granted access to this repository to submit a solution for the given requirements. Please read all the instructions carefully and email us if you have any questions. Good luck, but most of all have fun - this is your chance to demonstrate what you can do. 
 
 ## Getting Started
 First, fork this repository into your GitHub account. Then complete each of the parts below working as you would in a professional environment. Once you have completed all the sections, please update the README to reflect how to build and run your application, as well as any architectural decisions you have made. When you believe you are ready to submit your challenge, submit a pull request into our master branch. We will see the notification and get back to you on next steps. 
 
 ## What we are looking for
 
-* Ability to set up a Rails Application
+* Ability to set up an MVC applicatoin.
 * Ability to set up a Relational Database
 * Understanding of the HTTP protocol and how it works with Rails' "RESTful" conventions
 * Understanding the basics of CRUD
@@ -81,3 +81,9 @@ Build an application that will be a directory of companies, and the people who h
 <br />
 ![step 5](mockups/Step 5.png)
 
+
+### Part 6 : Stretch Challenge
+This section of the challange in not required but would give us greater insight into your abilities. 
+
+1. Using the libraries and image hosting service of your choice, add the ability to upload images to a company. Then add the image into the index, show, and edit page. 
+2. Sign-up for a Heroku account and deploy your application to the web. Please provide us with deployed URL.
