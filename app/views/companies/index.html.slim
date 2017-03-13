@@ -1,0 +1,9 @@
+section.companies
+  h2 All Companies
+
+  - @companies.each do |company|
+    article.company
+      header
+        h4.name= company.name
+        h5.location= "#{company.city}, #{company.state}"
+      .description= company.description
