@@ -1,0 +1,28 @@
+version: '2'
+services:
+  web:
+    image: jrforrest/corp_keeper:web
+    links:
+      - app
+    ports:
+      - "80:80"
+    fip: 199.245.56.65
+
+  app:
+    image: jrforrest/corp_keeper:app
+    ports:
+      - 3000
+    links:
+      - postgres
+    environment:
+      - RAILS_ENV=production
+    # This env file will contain secrets, should not be commited, and will
+    # need to be acquired by each individual develop from the team, or
+    # assembled from the vars set in existing prod containers
+    env_file:
+      - config/containers/production.env
+
+  postgres:
+    image: postgres:9.5
+    ports:
+      - 5432

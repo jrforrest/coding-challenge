@@ -1,0 +1,36 @@
+app:
+  build: .
+  dockerfile: config/containers/Dockerfile-app
+  volumes:
+    - .:/app
+  ports:
+    - 3000
+  links:
+    - postgres
+  environment:
+    - RAILS_ENV=production
+  # This env file will contain secrets, should not be commited, and will
+  # need to be acquired by each individual develop from the team, or
+  # assembled from the vars set in existing prod containers
+  env_file:
+    - config/containers/production.env
+
+web:
+  build: .
+  dockerfile: config/containers/Dockerfile-web
+  links:
+    - app
+  ports:
+    - "8000:80"
+
+postgres:
+  image: postgres:9.5
+  ports:
+    - 5432
+  volumes_from:
+    - data
+
+data:
+  image: busybox
+  volumes:
+    - /var/lib/postgresql/data

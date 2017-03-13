@@ -1,4 +1,5 @@
 app:
+  dockerfile: config/containers/Dockerfile-web
   build: .
   volumes:
     - .:/app
