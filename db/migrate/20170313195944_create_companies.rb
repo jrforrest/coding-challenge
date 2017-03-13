@@ -1,10 +1,10 @@
 class CreateCompanies < ActiveRecord::Migration[5.0]
   def change
     create_table :companies do |t|
-      t.string :name, required: true
+      t.string :name
 
-      t.string :city, required: true
-      t.string :state, required: true
+      t.string :city
+      t.string :state
 
       t.text :description
     end
