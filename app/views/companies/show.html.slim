@@ -12,3 +12,9 @@ section.company
           data: { confirm: 'Are you sure you want to delete that?'}
 
   p.description=@company.description
+
+  .founders
+    - @company.founders.each do |founder|
+      .founder
+        strong.name= "#{founder.full_name}:"
+        span.position= " #{founder.position}"
