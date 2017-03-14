@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 describe Company do
+  context 'when missing a required field' do
+    subject { build(:company, founded_at: nil) }
+
+    it { is_expected.to be_invalid }
+  end
+
   context 'when generated with a factory' do
     subject { build(:company) }
 

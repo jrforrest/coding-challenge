@@ -1,5 +1,7 @@
 section.companies
-  h2 All Companies
+  header
+    h2 All Companies
+    = link_to 'Create Company', new_company_path
 
   - @companies.each do |company|
     article.company
