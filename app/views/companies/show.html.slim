@@ -6,4 +6,9 @@ section.company
       .location= company_location(@company)
       .controls
         = link_to 'Edit', edit_company_path(@company), class: 'button'
+        = link_to 'Delete', company_path(@company), \
+          class: 'button', \
+          method: :delete, \
+          data: { confirm: 'Are you sure you want to delete that?'}
+
   p.description=@company.description

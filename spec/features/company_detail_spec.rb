@@ -37,4 +37,23 @@ describe 'Viewing company details' do
       end
     end
   end
+
+  describe 'deleting a company' do
+    before do
+      visit company_path(company)
+      click_link 'Delete'
+    end
+
+    it 'takes me the index' do
+      expect(current_path).to eql(root_path)
+    end
+
+    it 'deletes the compay' do
+      expect(page).to have_no_selector('.name', text: company.name)
+    end
+
+    it 'notifies me of success' do
+      expect(page).to have_selector('.flash-alert.success')
+    end
+  end
 end
