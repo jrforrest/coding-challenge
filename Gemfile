@@ -21,6 +21,9 @@ gem 'slim'
 # Form helpers
 gem 'simple_form'
 
+# You can never avoid it for long!
+gem 'jquery-rails'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-milligram-scss'
   gem 'rails-assets-pikaday'

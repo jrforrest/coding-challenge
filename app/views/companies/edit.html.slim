@@ -1,0 +1,6 @@
+section.edit-company
+  header
+    h2 Edit #{@company.name}
+    = link_to 'Back to detail', company_path(@company)
+
+  == render partial: 'form'
