@@ -2,14 +2,4 @@ section.new-company
   header
     h2 Create a new company
     = link_to 'Back to listing', root_path
-  == simple_form_for @company do |f|
-    = f.input :name, required: true, label: 'Name'
-    .input-row
-      = f.input :city, required: true
-      = f.input :state, required: true
-      = f.input :founded_at, required: true, as: :string
-    = f.input :description, required: true
-    = f.submit :save
-
-javascript:
-  new Pikaday({field: document.querySelector('input[name="company[founded_at]"]')})
+  == render partial: 'form'

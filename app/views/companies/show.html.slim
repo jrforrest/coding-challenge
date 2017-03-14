@@ -5,4 +5,5 @@ section.company
       .founded_at= date(@company.founded_at)
       .location= company_location(@company)
       .controls
+        = link_to 'Edit', edit_company_path(@company), class: 'button'
   p.description=@company.description

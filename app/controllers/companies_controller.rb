@@ -11,6 +11,20 @@ class CompaniesController < ApplicationController
     @company = Company.new
   end
 
+  def edit
+    @company = Company.find(params[:id])
+  end
+
+  def update
+    @company = Company.find(params[:id])
+    if @company.update(company_params)
+      flash[:success] = 'Company updated!'
+      redirect_to company_url(@company)
+    else
+      render :edit
+    end
+  end
+
   def create
     @company = Company.new(company_params)
     if @company.save

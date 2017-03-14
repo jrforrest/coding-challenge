@@ -28,5 +28,13 @@ describe 'Viewing company details' do
     it { is_expected.to have_selector('.name', text: company.name) }
     it { is_expected.to have_selector('.founded_at', text: date_string) }
     it { is_expected.to have_selector('.description', text: description_string) }
+
+    context 'when the edit button is clicked' do
+      before { click_link 'Edit' }
+
+      it 'takes me to the edit page' do
+        expect(current_path).to eql(edit_company_path(company))
+      end
+    end
   end
 end
