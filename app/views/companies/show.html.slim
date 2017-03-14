@@ -1,0 +1,8 @@
+section.company
+  header
+    h2.name= @company.name
+    .detail
+      .founded_at= date(@company.founded_at)
+      .location= company_location(@company)
+      .controls
+  p.description=@company.description

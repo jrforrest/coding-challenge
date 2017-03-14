@@ -6,6 +6,7 @@ section.companies
   - @companies.each do |company|
     article.company
       header
-        h4.name= company.name
+        h4.name
+          = link_to company.name, company_path(company)
         h5.location= "#{company.city}, #{company.state}"
       .description= company.description
