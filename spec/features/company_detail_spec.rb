@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Viewing company details' do
-  let!(:company) { create(:company, :with_founders) }
+  let!(:company) { create(:company, :with_founders, :with_tags) }
 
   describe 'clicking a company name from the home page' do
     before do
@@ -24,6 +24,7 @@ describe 'Viewing company details' do
       f = company.founders.first
       "#{f.full_name}: #{f.position}"
     end
+    let(:tag_string) { company.tags.first.name }
 
     before { visit company_path(company) }
     subject { page }
@@ -33,6 +34,7 @@ describe 'Viewing company details' do
     it { is_expected.to have_selector('.founded_at', text: date_string) }
     it { is_expected.to have_selector('.description', text: description_string) }
     it { is_expected.to have_selector('.founder', text: founder_string) }
+    it { is_expected.to have_selector('.tag', text: tag_string) }
 
     context 'when the edit button is clicked' do
       before { click_link 'Edit' }

@@ -14,16 +14,35 @@ section.company
   p.description=@company.description
 
   .founders
-    - @company.founders.each do |founder|
-      .founder
-        strong.name= "#{founder.full_name}:"
-        span.position= " #{founder.position}"
-    button.add-founder Add Founder
+    .content
+      - @company.founders.each do |founder|
+        .founder
+          strong.name= "#{founder.full_name}:"
+          span.position= " #{founder.position}"
+    .controls
+      button.add-founder Add Founder
 
   == render partial: 'founders/form', locals: { hidden: true }
+
+  .tags
+    .content
+      - @company.tags.each do |tag|
+        strong.tag= tag.name
+
+    .controls
+      button.add-tag Add Tag
+
+  == simple_form_for @tag, url: company_tags_path(@company), html: { class: 'new-tag hide'} do |f|
+    = f.input :name
+    = f.submit :save
 
 javascript:
   $('button.add-founder').click(function(e) {
     $(e.target).hide()
     $('form.new-founder').show()
+  });
+
+  $('button.add-tag').click(function(e) {
+    $(e.target).hide()
+    $('form.new-tag').show()
   });

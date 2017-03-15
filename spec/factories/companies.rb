@@ -11,5 +11,11 @@ FactoryGirl.define do
         rand(1..3).times { company.founders << build(:founder, company: company) }
       end
     end
+
+    trait :with_tags do
+      after(:build) do |company|
+        rand(1..3).times { company.tags << build(:tag) }
+      end
+    end
   end
 end

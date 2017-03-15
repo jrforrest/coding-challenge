@@ -6,6 +6,7 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
     @founder = Founder.new(company: @company)
+    @tag = Tag.new
   end
 
   def new
