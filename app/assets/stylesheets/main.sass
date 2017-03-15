@@ -11,10 +11,14 @@ body
 @mixin shadow
   box-shadow: 0 0.5rem 0.5rem rgba(#333, 0.2)
 
-// Headers will spread their elements horizontally
-header
+@mixin horizontal-flex
   display: flex
   flex-direction: row
+
+// Headers will spread their elements horizontally
+header
+  @include horizontal-flex
+
   justify-content: space-between
   align-items: center
   margin-bottom: 2rem
@@ -50,8 +54,7 @@ section.companies
     box-shadow: 0 0.5rem 0.5rem rgba(#333, 0.2)
 
 .input-row
-  display: flex
-  flex-direction: row
+  @include horizontal-flex
 
   &>*
     flex: 1
@@ -65,9 +68,9 @@ section.company
     flex-direction: column
 
   .detail
+    @include horizontal-flex
+
     width: 100%
-    display: flex
-    flex-direction: row
     flex-wrap: wrap
     justify-content: space-between
     align-items: baseline
@@ -90,16 +93,15 @@ section.company
 
   .founders, .tags
     @include shadow
+    @include horizontal-flex
 
-    display: flex
-    flex-direction: row
     justify-content: space-between
     margin-bottom: 2rem
     padding: 1rem
 
     .content
-      display: flex
-      flex-direction: row
+      @include horizontal-flex
+
       justify-content: flex-start
 
       span, strong
