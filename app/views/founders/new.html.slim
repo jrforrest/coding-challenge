@@ -1,0 +1,7 @@
+section.new-founder
+  h2 Derp
+  p
+   | Looks like there was a problem saving that Founder for
+   = " #{@founder.company.name}"
+   | .  Correct the issues below and give it another shot.
+  == render partial: 'form', locals: { hidden: false }

@@ -12,3 +12,18 @@ section.company
           data: { confirm: 'Are you sure you want to delete that?'}
 
   p.description=@company.description
+
+  .founders
+    - @company.founders.each do |founder|
+      .founder
+        strong.name= "#{founder.full_name}:"
+        span.position= " #{founder.position}"
+    button.add-founder Add Founder
+
+  == render partial: 'founders/form', locals: { hidden: true }
+
+javascript:
+  $('button.add-founder').click(function(e) {
+    $(e.target).hide()
+    $('form.new-founder').show()
+  });
