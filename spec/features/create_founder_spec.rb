@@ -7,7 +7,7 @@ describe 'Adding a founder to a company' do
     visit company_path(company)
     fill_in 'Full name', with: input_name
     fill_in 'Position', with: input_position
-    click_button 'save'
+    click_save
   end
 
   shared_examples_for :save_success do
@@ -43,10 +43,16 @@ describe 'Adding a founder to a company' do
     context 'When I correct the issues and continue' do
       before do
         fill_in 'Position', with: 'Bashtronaut'
-        click_button 'save'
+        click_save
       end
 
       it_behaves_like :save_success
     end
+  end
+
+  private
+
+  def click_save
+    page.find('.new-founder input[type="submit"]').click
   end
 end
