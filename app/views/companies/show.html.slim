@@ -22,6 +22,10 @@ section.company
 
   == render partial: 'founders/form', locals: { hidden: true }
 
+  .tags
+    - @company.tags.each do |tag|
+      strong.tag= tag.name
+
 javascript:
   $('button.add-founder').click(function(e) {
     $(e.target).hide()
