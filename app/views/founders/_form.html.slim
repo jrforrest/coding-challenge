@@ -1,0 +1,7 @@
+- classes = "new-founder #{hidden ? 'hide' : ''}"
+== simple_form_for @founder, html: { class: classes } do |f|
+  h4 Add a founder
+  = f.input :company_id, as: :hidden
+  = f.input :full_name
+  = f.input :position
+  = f.submit :save
