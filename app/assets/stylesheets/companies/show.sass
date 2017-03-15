@@ -1,0 +1,48 @@
+@import main
+
+section.company
+  header
+    flex-direction: column
+
+  .detail
+    @include horizontal-flex
+
+    width: 100%
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: baseline
+
+    .founded_at
+      flex: 1
+      text-align: left
+      min-width: 20rem
+    .controls
+      flex: 1
+      text-align: right
+      min-width: 20rem
+    .location
+      flex: 3
+      text-align: center
+      min-width: 20rem
+
+    a.button:last-child
+      margin-left: 1rem
+
+  .founders, .tags
+    @include shadow
+    @include horizontal-flex
+
+    justify-content: space-between
+    margin-bottom: 2rem
+    padding: 1rem
+
+    .content
+      @include horizontal-flex
+
+      justify-content: flex-start
+
+      span, strong
+        margin-right: 2rem
+
+  .new-founder
+    margin-top: 2rem
