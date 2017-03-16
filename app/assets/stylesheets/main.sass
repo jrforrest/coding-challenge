@@ -8,21 +8,29 @@ body
 .hide
   display: none
 
-// Headers will spread their elements horizontally
-header
+@mixin shadow
+  box-shadow: 0 0.5rem 0.5rem rgba(#333, 0.2)
+
+@mixin horizontal-flex
   display: flex
   flex-direction: row
+
+// Headers will spread their elements horizontally
+header
+  @include horizontal-flex
+
   justify-content: space-between
   align-items: center
   margin-bottom: 2rem
 
 .flash-alert
+  @include shadow
+
   position: absolute
   top: 0
   width: 100%
   text-align: center
   z-index: 2
-  box-shadow: 0 0.5rem 0.5rem rgba(#333, 0.2)
 
   &.fade
     opacity: 0
@@ -34,19 +42,13 @@ header
 
 #main
   max-width: 120rem
+  min-width: 100rem
   margin-left: auto
   margin-right: auto
   padding: 1rem
 
-section.companies
-  article
-    padding: 1rem
-    margin-bottom: 3rem
-    box-shadow: 0 0.5rem 0.5rem rgba(#333, 0.2)
-
 .input-row
-  display: flex
-  flex-direction: row
+  @include horizontal-flex
 
   &>*
     flex: 1
@@ -55,46 +57,3 @@ section.companies
     &:last-child
       margin-right: 0
 
-section.company
-  header
-    flex-direction: column
-
-  .detail
-    width: 100%
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-between
-    align-items: baseline
-
-    .founded_at
-      flex: 1
-      text-align: left
-      min-width: 20rem
-    .controls
-      flex: 1
-      text-align: right
-      min-width: 20rem
-    .location
-      flex: 3
-      text-align: center
-      min-width: 20rem
-
-    a.button:last-child
-      margin-left: 1rem
-
-  .founders, .tags
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-
-    .content
-      display: flex
-      flex-direction: row
-      justify-content: flex-start
-
-      span, strong
-        margin-right: 2rem
-
-  .new-founder
-    margin-top: 2rem
